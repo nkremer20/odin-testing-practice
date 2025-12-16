@@ -10,4 +10,12 @@ function capitalize(text) {
     return text_split.join('');
 }
 
-module.exports = { capitalize };
+function reverseString(text) {
+    if (text === undefined || text.trim().length === 0) {
+        return '';
+    }
+
+    return text.split('').reverse().join('')
+}
+
+module.exports = { capitalize, reverseString };
