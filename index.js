@@ -43,12 +43,29 @@ class Calculator {
 }
 
 
-// TODO: Ceasar Cipher
-function caesarCipher() {
+// Ceasar Cipher
+function caesarCipher(text, shift) {
+    let output = '';
 
+    for (let i = 0; i < text.length; i++) {
+        // Check if character is a letter
+        if (text[i].match(/[a-z]/i)) {
+            const code = text.charCodeAt(i);
+            const isUpperCase = (code >= 65 && code <=90);
+            const base = isUpperCase ? 65 : 97;
+
+            const shiftedCode = ((code - base + shift) % 26) + base;
+            output += String.fromCharCode(shiftedCode);
+        }
+        else {
+            output += text[i];
+        }
+    }
+
+    return output;
 }
 
-// TODO: Analyze Array
+// Analyze Array
 function analyzeArray(arr) {
     const output = {};
 

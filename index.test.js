@@ -45,10 +45,20 @@ test('Test to multiply 2 numbers', () => {
     expect(new Calculator(4, 2).multiply()).toBe(8)
 });
 
-// TODO: Ceasar Cipher Tests
+// Ceasar Cipher Tests
+test('Test for xyz with shift of 3', () => {
+    expect(caesarCipher('xyz', 3)).toBe('abc');
+})
 
+test('Test for HeLLo with shift of 3', () => {
+    expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
+})
 
-// TODO: Analyze Array Tests
+test('Test for Hello, World! with shift of 3', () => {
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+})
+
+// Analyze Array Tests
 test('Test for array', () => {
     expect(analyzeArray([1,8,3,4,2,6])).toStrictEqual(
         {
