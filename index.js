@@ -18,7 +18,7 @@ function reverseString(text) {
     return text.split('').reverse().join('')
 }
 
-// TODO: Calculator
+// Calculator
 class Calculator {
     constructor(n1, n2) {
         this.n1 = n1;
@@ -49,7 +49,24 @@ function caesarCipher() {
 }
 
 // TODO: Analyze Array
-function analyzeArray() {
+function analyzeArray(arr) {
+    const output = {};
+
+    if (arr === undefined || arr.length === 0) {
+        return output;
+    }
+
+    arr_length = arr.length;
+
+    output['average'] = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / arr_length;
+
+    output['min'] = Math.min(...arr);
+
+    output['max'] = Math.max(...arr);
+
+    output['length'] = arr_length;
+
+    return output;
 
 }
 

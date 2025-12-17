@@ -28,7 +28,7 @@ test('Test empty reverseString function', () => {
     expect(reverseString('')).toBe('');
 });
 
-// TODO: Calculator Tests
+// Calculator Tests
 test('Test to add 2 numbers', () => {
     expect(new Calculator(4, 2).add()).toBe(6)
 });
@@ -47,4 +47,23 @@ test('Test to multiply 2 numbers', () => {
 
 // TODO: Ceasar Cipher Tests
 
+
 // TODO: Analyze Array Tests
+test('Test for array', () => {
+    expect(analyzeArray([1,8,3,4,2,6])).toStrictEqual(
+        {
+            average: 4,
+            min: 1,
+            max: 8,
+            length: 6
+        }
+    )
+});
+
+test('Test empty array', () => {
+    expect(analyzeArray([])).toStrictEqual({})
+});
+
+test('Test undefined array', () => {
+    expect(analyzeArray()).toStrictEqual({})
+});
