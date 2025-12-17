@@ -1,4 +1,4 @@
-const { capitalize, reverseString } = require('./index.js')
+const { capitalize, reverseString, Calculator, caesarCipher, analyzeArray } = require('./index.js')
 
 // Capitalize Tests
 
@@ -27,3 +27,24 @@ test('Test undefined reverseString function', () => {
 test('Test empty reverseString function', () => {
     expect(reverseString('')).toBe('');
 });
+
+// TODO: Calculator Tests
+test('Test to add 2 numbers', () => {
+    expect(new Calculator(4, 2).add()).toBe(6)
+});
+
+test('Test to subtract 2 numbers', () => {
+    expect(new Calculator(4, 2).subtract()).toBe(2)
+});
+
+test('Test to divide 2 numbers', () => {
+    expect(new Calculator(4, 2).divide()).toBe(2)
+});
+
+test('Test to multiply 2 numbers', () => {
+    expect(new Calculator(4, 2).multiply()).toBe(8)
+});
+
+// TODO: Ceasar Cipher Tests
+
+// TODO: Analyze Array Tests

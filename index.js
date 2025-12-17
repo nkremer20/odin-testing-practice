@@ -18,4 +18,39 @@ function reverseString(text) {
     return text.split('').reverse().join('')
 }
 
-module.exports = { capitalize, reverseString };
+// TODO: Calculator
+class Calculator {
+    constructor(n1, n2) {
+        this.n1 = n1;
+        this.n2 = n2;
+    }
+
+    add() {
+        return this.n1 + this.n2;
+    }
+
+    subtract() {
+        return this.n1 - this.n2; 
+    }
+
+    divide() {
+        return this.n1 / this.n2;
+    }
+
+    multiply() {
+        return this.n1 * this.n2;
+    }
+}
+
+
+// TODO: Ceasar Cipher
+function caesarCipher() {
+
+}
+
+// TODO: Analyze Array
+function analyzeArray() {
+
+}
+
+module.exports = { capitalize, reverseString, Calculator, caesarCipher, analyzeArray };
